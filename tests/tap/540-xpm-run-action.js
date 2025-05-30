@@ -22,6 +22,9 @@
 
 // ----------------------------------------------------------------------------
 
+import * as path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
 // The `[node-tap](http://www.node-tap.org)` framework.
 import { test } from 'tap'
 
@@ -97,6 +100,35 @@ test('xpm run -h',
       t.fail(err.message)
     }
     t.end()
+  })
+
+/**
+ * Test if Liquid plugins are correctly loaded
+ */
+test('xpm run rot13',
+  async (t) => {
+    try {
+      const { code, stdout, stderr } = await Common.xpmCli([
+        'run',
+        '-C',
+        path.resolve(fileURLToPath(import.meta.url), '..', '..', 'mock', 'devdep'),
+        'echo_rot13'
+      ]);
+      // Check exit code.
+      t.equal(code, CliExitCodes.SUCCESS, 'exit code is success');
+      const outLines = stdout.split(/\r?\n/);
+      t.ok(outLines.length > 1, 'has enough output');
+      if (outLines.length > 1) {
+        // console.log(outLines)
+        t.match(outLines[1],
+          'rpub', 'filter ran properly');
+      }
+      // There should be no error messages.
+      t.equal(stderr, '', 'stderr is empty');
+    } catch (err) {
+      t.fail(err.message);
+    }
+    t.end();
   })
 
 // ----------------------------------------------------------------------------
