@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xpack/xpm-js.git"
+    "url": "git+https://github.com/mmomtchev/xpm-js.git"
   },
   "keywords": [
     "xpack",
