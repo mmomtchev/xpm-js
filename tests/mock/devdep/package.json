@@ -39,10 +39,41 @@
         "platforms": "all"
       }
     },
-    "properties": {},
-    "actions": {
-      "echo_rot13": "echo {{ 'echo' | rot13 }}"
+    "properties": {
+      "commandEchoGLOBAL": {
+        "linux": "echo $GLOBAL",
+        "darwin": "echo $GLOBAL",
+        "win32": "echo %GLOBAL%"
+      },
+      "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}"
     },
-    "buildConfigurations": {}
+    "environment": {
+      "GLOBAL": "VALUE1"
+    },
+    "buildConfigurations": {
+      "conf1": {
+        "properties": {
+          "commandEchoCONF": {
+            "linux": "echo $GLOBAL $CONF",
+            "darwin": "echo $GLOBAL $CONF",
+            "win32": "echo %GLOBAL% %CONF%"
+          }
+        },
+        "environment": {
+          "CONF": "VALUE2"
+        },
+        "actions": {
+          "prepare": [
+            "{{ properties.commandEchoCONF[os.platform] }}"
+          ]
+        }
+      }
+    },
+    "actions": {
+      "echo_rot13": "echo {{ 'echo' | rot13 }}",
+      "prepare": [
+        "{{ properties.commandEchoGLOBAL[os.platform] }}"
+      ]
+    }
   }
 }
