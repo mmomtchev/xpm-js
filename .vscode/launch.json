@@ -4,7 +4,19 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-
+    {
+      "name": "xpm run echo_rot13",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/xpm.js",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "run",
+        "-C",
+        "${workspaceFolder}/tests/mock/devdep",
+        "echo_rot13"
+      ]
+    },
     {
       "type": "node",
       "request": "launch",

@@ -1,7 +1,9 @@
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack/xpm-js)](https://github.com/xpack/xpm-js/blob/master/package.json)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/xpack/xpm-js)](https://github.com/xpack/xpm-js/releases)
+*This fork adds features for the `hadron` build system*
+
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/mmomtchev/xpm-js)](https://github.com/mmomtchev/xpm-js/blob/master/package.json)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/mmomtchev/xpm-js)](https://github.com/mmomtchev/xpm-js/releases)
 [![NPM Version](https://img.shields.io/npm/v/xpm?color=green)](https://www.npmjs.com/package/xpm/)
-[![license](https://img.shields.io/github/license/xpack/xpm-js)](https://github.com/xpack/xpm-js/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/mmomtchev/xpm-js)](https://github.com/mmomtchev/xpm-js/blob/master/LICENSE)
 
 # The xPack Project Manager
 
