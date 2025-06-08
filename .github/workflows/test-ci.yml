@@ -25,7 +25,7 @@ name: CI on Push
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
       - 'development'
     tags-ignore:
       - '**'
