@@ -105,7 +105,7 @@
     "@ilg/cli-start-options",
     "@npmcli/arborist",
     "@xpack/cmd-shim",
-    "@xpack/xpm-liquid",
+    "@mmomtchev/xpm-liquid",
     "cacache",
     "copy-file",
     "cross-spawn",
