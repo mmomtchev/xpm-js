@@ -33,8 +33,8 @@ import { test } from 'tap'
 
 // ----------------------------------------------------------------------------
 
-// import { CliApplication } from '@ilg/cli-start-options';
-import cliStartOptionsCsj from '@ilg/cli-start-options'
+// import { CliApplication } from '@mmomtchev/cli-start-options';
+import cliStartOptionsCsj from '@mmomtchev/cli-start-options'
 
 // ----------------------------------------------------------------------------
 

@@ -31,8 +31,8 @@ import { test } from 'tap'
 // ----------------------------------------------------------------------------
 
 // ES6: `import { CliExitCodes } from 'cli-start-options'
-// import { CliExitCodes } from '@ilg/cli-start-options'
-import cliStartOptionsCsj from '@ilg/cli-start-options'
+// import { CliExitCodes } from '@mmomtchev/cli-start-options'
+import cliStartOptionsCsj from '@mmomtchev/cli-start-options'
 
 // ----------------------------------------------------------------------------
 

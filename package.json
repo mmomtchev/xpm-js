@@ -20,7 +20,7 @@
     "fix": "standard --fix lib tests",
     "dev-cycle": "npm run fix && npm run test",
     "npm-install": "npm install",
-    "npm-link-deps": "npm link @ilg/cli-start-options",
+    "npm-link-deps": "npm link @mmomtchev/cli-start-options",
     "npm-link-helpers": "npm link @xpack/npm-packages-helper @xpack/docusaurus-template-liquid",
     "npm-outdated": "npm outdated",
     "npm-update": "npm update",
@@ -102,6 +102,7 @@
     "tap": "^21.0.1"
   },
   "bundleDependencies": [
+    "@mmomtchev/cli-start-options",
     "@npmcli/arborist",
     "@xpack/cmd-shim",
     "@mmomtchev/xpm-liquid",

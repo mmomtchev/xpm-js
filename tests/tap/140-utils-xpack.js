@@ -28,8 +28,8 @@ import { test } from 'tap'
 // ----------------------------------------------------------------------------
 
 // const Common = require('../common.js').Common
-// const { CliLogger } = require('@ilg/cli-start-options')
-import cliStartOptionsCsj from '@ilg/cli-start-options'
+// const { CliLogger } = require('@mmomtchev/cli-start-options')
+import cliStartOptionsCsj from '@mmomtchev/cli-start-options'
 
 // ----------------------------------------------------------------------------
 
