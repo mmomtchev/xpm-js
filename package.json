@@ -72,10 +72,10 @@
   "homepage": "https://xpack.github.io/xpm/",
   "homepagePreview": "https://xpack.github.io/xpm-js/",
   "dependencies": {
-    "@ilg/cli-start-options": "^0.8.2",
+    "@mmomtchev/cli-start-options": "^0.6.2",
+    "@mmomtchev/xpm-liquid": "^2.0.0",
     "@npmcli/arborist": "^7.4.0",
     "@xpack/cmd-shim": "^4.1.0-2",
-    "@mmomtchev/xpm-liquid": "^2.0.0",
     "cacache": "^18.0.2",
     "copy-file": "^11.0.0",
     "cross-spawn": "^7.0.3",
@@ -102,7 +102,6 @@
     "tap": "^21.0.1"
   },
   "bundleDependencies": [
-    "@ilg/cli-start-options",
     "@npmcli/arborist",
     "@xpack/cmd-shim",
     "@mmomtchev/xpm-liquid",
