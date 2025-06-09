@@ -41,6 +41,22 @@ on:
       - '.github/workflows/publish-github-pages*.yml'
       - '.github/workflows/trigger-publish-github-pages*.yml'
       - 'typedoc.json'
+  pull_request:
+    branches:
+      - 'main'
+      - 'development'
+    paths-ignore:
+      - 'docs/**'
+      - 'website/**'
+      - 'LICENSE'
+      - '**.md'
+      - '.gitignore'
+      - '.npmignore'
+      - '.vscode/**'
+      - '.github/FUNDING.yml'
+      - '.github/workflows/publish-github-pages*.yml'
+      - '.github/workflows/trigger-publish-github-pages*.yml'
+      - 'typedoc.json'
 
 jobs:
   npm-test:
