@@ -2,6 +2,9 @@
   "include": [
     "./actions.json"
   ],
+  "properties": {
+    "includedOverriden": "worse"
+  },
   "liquidPlugins": [
     "./rot13.cjs"
   ]

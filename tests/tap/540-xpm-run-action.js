@@ -133,6 +133,37 @@ test('xpm run quotes',
   })
 
 /**
+ * Test if included files correctly override values
+ */
+test('xpm run echo_included',
+  async (t) => {
+    try {
+      const dirname = fileURLToPath(import.meta.url)
+      const packagePath = path.resolve(dirname, '..', '..', 'mock', 'devdep')
+      const { code, stdout, stderr } = await Common.xpmCli([
+        'run',
+        '-C',
+        packagePath,
+        'echo_included'
+      ])
+      // Check exit code.
+      t.equal(code, CliExitCodes.SUCCESS, 'exit code is success')
+      const outLines = stdout.split(/\r?\n/)
+      t.ok(outLines.length > 1, 'has enough output')
+      if (outLines.length > 1) {
+        // console.log(outLines)
+        t.match(outLines[1],
+          'good', 'include override correctly')
+      }
+      // There should be no error messages.
+      t.equal(stderr, '', 'stderr is empty')
+    } catch (err) {
+      t.fail(err.message)
+    }
+    t.end()
+  })
+
+/**
  * Test if Liquid plugins are correctly loaded
  */
 test('xpm run rot13',

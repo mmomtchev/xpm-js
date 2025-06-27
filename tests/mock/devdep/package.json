@@ -45,7 +45,8 @@
         "darwin": "echo $GLOBAL",
         "win32": "echo %GLOBAL%"
       },
-      "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}"
+      "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
+      "includedOverriden": "good"
     },
     "environment": {
       "GLOBAL": "VALUE1"
