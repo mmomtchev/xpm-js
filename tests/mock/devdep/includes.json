@@ -1,6 +1,7 @@
 {
   "include": [
-    "{{ properties.actionsFile }}"
+    "{{ properties.actionsFile }}",
+    "{% if 1 == 2 %}file{% endif %}"
   ],
   "properties": {
     "includedOverriden": "worse",
