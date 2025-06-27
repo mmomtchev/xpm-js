@@ -1,0 +1,8 @@
+{
+  "actions": {
+    "echo_rot13": "echo {{ 'echo' | rot13 }}",
+    "prepare": [
+      "{{ properties.commandEchoGLOBAL[os.platform] }}"
+    ]
+  }
+}

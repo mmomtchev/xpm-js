@@ -1,0 +1,8 @@
+{
+  "include": [
+    "./actions.json"
+  ],
+  "liquidPlugins": [
+    "./rot13.cjs"
+  ]
+}
