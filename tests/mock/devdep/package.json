@@ -29,7 +29,7 @@
   "xpack": {
     "minimumXpmRequired": "0.16.1",
     "include": [
-      "./includes.json"
+      "{{ properties.includeFile }}"
     ],
     "dependencies": {},
     "devDependencies": {
@@ -46,7 +46,8 @@
         "win32": "echo %GLOBAL%"
       },
       "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
-      "includedOverriden": "good"
+      "includedOverriden": "good",
+      "includeFile": "./includes.json"
     },
     "environment": {
       "GLOBAL": "VALUE1"

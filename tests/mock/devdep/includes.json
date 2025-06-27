@@ -1,9 +1,10 @@
 {
   "include": [
-    "./actions.json"
+    "{{ properties.actionsFile }}"
   ],
   "properties": {
-    "includedOverriden": "worse"
+    "includedOverriden": "worse",
+    "actionsFile": "./actions.json"
   },
   "liquidPlugins": [
     "./rot13.cjs"
