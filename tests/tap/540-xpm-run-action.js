@@ -108,28 +108,28 @@ test('xpm run -h',
 test('xpm run quotes',
   async (t) => {
     try {
-      const dirname = fileURLToPath(import.meta.url);
+      const dirname = fileURLToPath(import.meta.url)
       const packagePath = path.resolve(dirname, '..', '..', 'mock', 'devdep')
       const { code, stdout, stderr } = await Common.xpmCli([
         'run',
         '-C',
         packagePath,
         'quotes'
-      ]);
+      ])
       // Check exit code.
-      t.equal(code, CliExitCodes.SUCCESS, 'exit code is success');
-      const outLines = stdout.split(/\r?\n/);
-      t.ok(outLines.length > 1, 'has enough output');
+      t.equal(code, CliExitCodes.SUCCESS, 'exit code is success')
+      const outLines = stdout.split(/\r?\n/)
+      t.ok(outLines.length > 1, 'has enough output')
       if (outLines.length > 1) {
         // console.log(outLines)
-        t.match(outLines[1], '2', 'quotes are correct');
+        t.match(outLines[1], '2', 'quotes are correct')
       }
       // There should be no error messages.
-      t.equal(stderr, '', 'stderr is empty');
+      t.equal(stderr, '', 'stderr is empty')
     } catch (err) {
-      t.fail(err.message);
+      t.fail(err.message)
     }
-    t.end();
+    t.end()
   })
 
 /**
@@ -155,15 +155,17 @@ test('xpm run rot13',
         t.match(outLines[1],
           'rpub', 'filter ran properly')
       }
+      // There should be no error messages.
+      t.equal(stderr, '', 'stderr is empty')
     } catch (err) {
-      t.fail(err.message);
+      t.fail(err.message)
     }
-    t.end();
+    t.end()
   })
 
 /**
  * Test if environment injection works.
- */;
+ */
 test('xpm run prepare',
   async (t) => {
     try {
@@ -175,7 +177,7 @@ test('xpm run prepare',
         path.join('tests', 'mock', 'devdep')
       ])
       // Check exit code.
-      t.equal(code, CliExitCodes.SUCCESS, 'exit code is success');
+      t.equal(code, CliExitCodes.SUCCESS, 'exit code is success')
       const outLines = stdout.split(/\r?\n/)
 
       t.ok(outLines.length > 0, 'has enough output')
@@ -184,11 +186,11 @@ test('xpm run prepare',
           'VALUE1', 'has global environment variable')
       }
       // There should be no error messages.
-      t.equal(stderr, '', 'stderr is empty');
+      t.equal(stderr, '', 'stderr is empty')
     } catch (err) {
-      t.fail(err.message);
+      t.fail(err.message)
     }
-    t.end();
+    t.end()
   })
 
 test('xpm run prepare --config conf1',
@@ -218,6 +220,5 @@ test('xpm run prepare --config conf1',
     }
     t.end()
   })
-
 
 // ----------------------------------------------------------------------------
