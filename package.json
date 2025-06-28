@@ -80,6 +80,7 @@
     "copy-file": "^11.0.0",
     "cross-spawn": "^7.0.3",
     "decompress": "^4.2.1",
+    "deepmerge": "^4.3.1",
     "del": "^8.0.0",
     "https-proxy-agent": "^7.0.4",
     "is-windows": "^1.0.2",
