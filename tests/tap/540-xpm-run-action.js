@@ -153,7 +153,7 @@ test('xpm run echo_included',
       if (outLines.length > 1) {
         // console.log(outLines)
         t.match(outLines[1],
-          'good', 'include override correctly')
+          'good', 'values from included are overridden')
       }
       // There should be no error messages.
       t.equal(stderr, '', 'stderr is empty')
