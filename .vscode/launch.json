@@ -18,6 +18,19 @@
       ]
     },
     {
+      "name": "xpm run echo_included",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/xpm.js",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "run",
+        "-C",
+        "${workspaceFolder}/tests/mock/devdep",
+        "echo_included"
+      ]
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "xpm --help",
