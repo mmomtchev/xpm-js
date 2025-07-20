@@ -4,6 +4,7 @@ Changes in reverse chronological order.
 
 ##
 
+bc678d0 resolve all includes relative to the including file (#7)
 9391331 switch to the scoped cli-start-options package (#3)
 
 ## 2025-06-08
