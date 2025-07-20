@@ -29,7 +29,7 @@
   "xpack": {
     "minimumXpmRequired": "0.16.1",
     "include": [
-      "{{ properties.includeFile }}"
+      "./include/{{ properties.includeFile }}"
     ],
     "dependencies": {},
     "devDependencies": {
