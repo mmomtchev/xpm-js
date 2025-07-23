@@ -4,6 +4,7 @@ Changes in reverse chronological order.
 
 ##
 
+260d0c7 fix and test array merge order (#10)
 711abbe fix single item includes in included files (#9) 
 0b4eac1 support single item includes (#8)
 bc678d0 resolve all includes relative to the including file (#7)
