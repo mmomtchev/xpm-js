@@ -70,7 +70,10 @@
       }
     },
     "actions": {
-      "quotes": "node -p \"1 + 1\""
+      "quotes": "node -p \"1 + 1\"",
+      "array": [
+        "echo 3"
+      ]
     }
   }
 }

@@ -7,6 +7,9 @@
     "prepare": [
       "{{ properties.commandEchoGLOBAL[os.platform] }}"
     ],
-    "echo_included": "echo {{ properties.includedOverriden }}"
+    "echo_included": "echo {{ properties.includedOverriden }}",
+    "array": [
+      "echo 1"
+    ]
   }
 }

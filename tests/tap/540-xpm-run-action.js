@@ -164,6 +164,42 @@ test('xpm run echo_included',
   })
 
 /**
+ * Test order of merged command arrays
+ */
+test('xpm run echo_included',
+  async (t) => {
+    try {
+      const dirname = fileURLToPath(import.meta.url)
+      const packagePath = path.resolve(dirname, '..', '..', 'mock', 'devdep')
+      const { code, stdout, stderr } = await Common.xpmCli([
+        'run',
+        '-q',
+        '-C',
+        packagePath,
+        'array'
+      ])
+      // Check exit code.
+      t.equal(code, CliExitCodes.SUCCESS, 'exit code is success')
+      const outLines = stdout.split(/\r?\n/)
+      t.ok(outLines.length > 3, 'has enough output')
+      if (outLines.length > 3) {
+        // console.log(outLines)
+        t.equal(outLines[0],
+          '1', 'order of merged arrays is correct')
+        t.equal(outLines[1],
+          '2', 'order of merged arrays is correct')
+        t.equal(outLines[2],
+          '3', 'order of merged arrays is correct')
+      }
+      // There should be no error messages.
+      t.equal(stderr, '', 'stderr is empty')
+    } catch (err) {
+      t.fail(err.message)
+    }
+    t.end()
+  })
+
+/**
  * Test if Liquid plugins are correctly loaded
  */
 test('xpm run rot13',

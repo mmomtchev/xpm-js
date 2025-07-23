@@ -7,6 +7,11 @@
     "includedOverriden": "worse",
     "actionsFile": "./actions.json"
   },
+  "actions": {
+    "array": [
+      "echo 2"
+    ]
+  },
   "liquidPlugins": [
     "./rot13.cjs"
   ]
