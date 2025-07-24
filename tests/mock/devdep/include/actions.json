@@ -1,13 +1,14 @@
 {
   "properties": {
-    "includedOverriden": "bad"
+    "includedOverriden": "bad",
+    "includedOverwritten": "bad"
   },
   "actions": {
     "echo_rot13": "echo {{ 'echo' | rot13 }}",
     "prepare": [
       "{{ properties.commandEchoGLOBAL[os.platform] }}"
     ],
-    "echo_included": "echo {{ properties.includedOverriden }}",
+    "echo_included": "echo {{ properties.includedOverriden }} {{ properties.includedOverwritten }}",
     "array": [
       "echo 1"
     ]
