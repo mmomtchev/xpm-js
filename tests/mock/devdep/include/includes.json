@@ -1,7 +1,8 @@
 {
   "include": [
     "{% if 1 == 1 %}{{ properties.actionsFile }}{% endif %}",
-    "{% if 1 == 2 %}error{% endif %}"
+    "{% if 1 == 2 %}error{% endif %}",
+    "./last.json"
   ],
   "properties": {
     "includedOverriden": "worse",
@@ -9,7 +10,7 @@
   },
   "actions": {
     "array": [
-      "echo 2"
+      "echo 3"
     ]
   },
   "liquidPlugins": [

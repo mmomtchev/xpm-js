@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "includedOverriden": "very bad",
+    "includedOverwritten": "good"
+  },
+  "actions": {
+    "array": [
+      "echo 2"
+    ]
+  }
+}
