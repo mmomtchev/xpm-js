@@ -72,7 +72,7 @@
   "homepage": "https://xpack.github.io/xpm/",
   "homepagePreview": "https://xpack.github.io/xpm-js/",
   "dependencies": {
-    "@mmomtchev/cli-start-options": "^0.6.3",
+    "@mmomtchev/cli-start-options": "^0.6.4",
     "@mmomtchev/xpm-liquid": "^2.0.0",
     "@npmcli/arborist": "^7.4.0",
     "@xpack/cmd-shim": "^4.1.0-2",
