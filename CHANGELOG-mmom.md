@@ -2,7 +2,11 @@
 
 Changes in reverse chronological order.
 
-##
+## 2025-11-11
+
+28c4145 update cli-start-options to fix the Windows `ENOENT` error on update check
+
+## 2025-09-04
 
 242be11 strict and clear including rules (#11)
 260d0c7 fix and test array merge order (#10)
